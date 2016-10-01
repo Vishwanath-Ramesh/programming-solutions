@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+		int natural = scanf("%d",&natural);
+		char roman[] = "";
+    	while(natural != 0){
+		if(natural >= 50){
+			strcat(roman,"L");
+			natural -= 50;
+			continue; }
+		if(natural >= 10){
+			strcat(roman,"X");
+			natural -= 10;
+			continue;}
+		if(natural >= 100){
+			strcat(roman,"C");
+			natural -= 100;
+			continue;}
+		if(natural >= 1000){
+			strcat(roman,"M");
+			natural -= 1000;
+			continue;}
+		if(natural <= 10){
+			strcat(roman,"I");
+			natural -= 10;
+			continue;}
+		if(natural >= 0)
+			break;
+		}
+		printf(roman);
+		return 0;
+}
