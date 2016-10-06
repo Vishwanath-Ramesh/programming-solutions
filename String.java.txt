@@ -1,0 +1,31 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    int words = 1,vowels = 0,consonants = 0,space = 0,special = 0;
+	    String vow = "aeiou";
+		Scanner scanner = new Scanner(System.in);
+		String stri = new String(scanner.nextLine());
+		String str = stri.toLowerCase();
+		for(int i = 0;i < str.length();i++){
+		    if(str.charAt(i) == 32)
+		        words += 1;
+		    if(str.charAt(i) == 'a' || str.charAt(i) == 'u' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o'){
+		        vowels += 1;}
+		    else{
+		        consonants += 1;
+		    }
+		    space = words - 1;
+		    if((str.charAt(i) < 65 && str.charAt(i) > 90))
+		        special += 1;
+		}
+		System.out.printf("%d",str.charAt(1));
+	}
+}
