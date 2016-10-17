@@ -1,0 +1,29 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    long int t,fib,i,previous = 0,current = 1,sum=0; 
+    scanf("%ld",&t);
+    for(long int a0 = 0; a0 < t; a0++){
+        long n; 
+        scanf("%ld",&n);
+         for(i=1;i<=n;i++){
+                fib = previous + current;
+                previous = current;
+                current = fib;
+                if(fib < n){
+                    if(fib % 2 == 0)
+                        sum = sum + fib;
+                }
+                else
+                    break;
+            }
+            printf("%ld\n",sum);
+    }
+    return 0;
+}
